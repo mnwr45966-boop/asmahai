@@ -133,15 +133,20 @@ h1 {
 .facebook-icon { color: #3b5998 !important; }
 .telegram-icon { color: #0088cc !important; }
 
-/* زر التواصل التجاري */
-.social-btn.business-btn {
-    border-color: #555;
-    color: #fff;
-    background: #2a2a2a;
+/* زر واتساب للتواصل التجاري (الجديد) */
+.social-btn.whatsapp-btn {
+    background: #25D366; /* لون واتساب الأخضر */
+    color: white;
+    border-color: #25D366;
+    box-shadow: 0 4px 10px rgba(37, 211, 102, 0.5);
 }
-.social-btn.business-btn:hover {
-    background: #3a3a3a;
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+.social-btn.whatsapp-btn i {
+    color: white !important; /* لضمان أن لون الأيقونة أبيض */
+}
+.social-btn.whatsapp-btn:hover {
+    background: #128C7E; /* لون أغمق عند التمرير */
+    border-color: #128C7E;
+    box-shadow: 0 0 20px rgba(37, 211, 102, 0.7);
 }
 
 
@@ -167,7 +172,7 @@ h1 {
 .ai-tool-card:hover {
     border-color: var(--primary-cyan);
     box-shadow: 0 0 15px rgba(0, 240, 255, 0.4);
-    transform: scale(1.05); /* زيادة تأثير الاحترافية */
+    transform: scale(1.05);
 }
 
 .ai-tool-card h4 {
@@ -248,7 +253,7 @@ footer {
         padding: 10px;
     }
     .video-thumbnail-card {
-        flex-direction: column; /* جعل الصورة المصغرة في الأعلى على الجوال */
+        flex-direction: column;
         align-items: stretch;
     }
     .thumbnail-img {
