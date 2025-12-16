@@ -1,0 +1,261 @@
+/* --- المتغيرات والألوان (Root Variables) --- */
+:root {
+    --primary-cyan: #00f0ff;
+    --primary-purple: #bc13fe;
+    --bg-dark: #050505;
+    --card-bg: #1e1e1e;
+    --text-color: #ffffff;
+}
+
+/* --- تنسيقات الجسم العامة (Body) --- */
+body {
+    font-family: 'Tajawal', sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    background-image: radial-gradient(circle at 50% 0%, rgba(188, 19, 254, 0.25), transparent 70%);
+}
+
+.main-content {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px 10px;
+}
+
+/* --- الرأس والصورة (Header) --- */
+header {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.profile-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--primary-cyan);
+    box-shadow: 0 0 15px rgba(188, 19, 254, 0.7);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.profile-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px var(--primary-cyan);
+}
+
+h1 {
+    font-size: 2rem;
+    margin: 10px 0 5px 0;
+    background: linear-gradient(to right, var(--primary-cyan), var(--primary-purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 900;
+}
+
+.handle {
+    font-size: 1rem;
+    color: #aaa;
+    margin-bottom: 20px;
+}
+
+/* --- النبذة التعريفية (Bio-short) --- */
+.bio-short {
+    background: var(--card-bg);
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    text-align: center;
+    border-right: 3px solid var(--primary-cyan);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* --- العناوين الرئيسية للأقسام (Section Titles) --- */
+.section-title {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-cyan);
+    margin: 40px 0 20px 0;
+    border-bottom: 2px solid rgba(0, 240, 255, 0.1);
+    padding-bottom: 10px;
+}
+
+/* --- تنسيقات الأزرار والبطاقات (Grids & Buttons) --- */
+.link-card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+
+/* --- الأزرار الاجتماعية (Social Buttons) --- */
+.social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 15px;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--primary-cyan);
+    border: 2px solid #333;
+    transition: 0.2s;
+    position: relative;
+}
+
+.social-btn i {
+    margin-left: 10px;
+    font-size: 1.2rem;
+    color: var(--primary-purple);
+}
+
+.social-btn:hover {
+    background: var(--primary-purple);
+    color: var(--text-color);
+    border-color: var(--primary-purple);
+    box-shadow: 0 0 15px rgba(188, 19, 254, 0.5);
+    transform: scale(1.01);
+}
+
+/* الألوان الخاصة */
+.social-btn.youtube-btn { background: #ff0000; color: white; border-color: #ff0000; box-shadow: 0 4px 10px rgba(255, 0, 0, 0.4); }
+.social-btn.youtube-btn i { color: white; }
+.social-btn.youtube-btn:hover { background: #cc0000; border-color: #cc0000; }
+
+.instagram-icon { color: #E1306C !important; }
+.facebook-icon { color: #3b5998 !important; }
+.telegram-icon { color: #0088cc !important; }
+
+/* زر التواصل التجاري */
+.social-btn.business-btn {
+    border-color: #555;
+    color: #fff;
+    background: #2a2a2a;
+}
+.social-btn.business-btn:hover {
+    background: #3a3a3a;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+
+/* --- بطاقات أدوات الذكاء الاصطناعي (AI Tools) --- */
+.ai-tools-grid {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+     gap: 15px;
+     margin-bottom: 40px;
+}
+
+.ai-tool-card {
+    background: #0a0a0a;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    color: var(--text-color);
+    border: 1px solid rgba(0, 240, 255, 0.2);
+    transition: 0.3s;
+}
+
+.ai-tool-card:hover {
+    border-color: var(--primary-cyan);
+    box-shadow: 0 0 15px rgba(0, 240, 255, 0.4);
+    transform: scale(1.05); /* زيادة تأثير الاحترافية */
+}
+
+.ai-tool-card h4 {
+    margin: 5px 0 0 0;
+    color: var(--primary-cyan);
+}
+
+.ai-tool-card p {
+    font-size: 0.8rem;
+    color: #aaa;
+    margin: 0;
+}
+
+.ai-tool-card i {
+    font-size: 2rem;
+    color: var(--primary-purple);
+    margin-bottom: 5px;
+}
+
+/* --- بطاقات الفيديو (Video Thumbnails) --- */
+.video-thumbnail-card {
+    display: flex;
+    align-items: center;
+    background: var(--card-bg);
+    border-radius: 10px;
+    overflow: hidden;
+    text-decoration: none;
+    color: var(--text-color);
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: 1px solid #333;
+}
+
+.video-thumbnail-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 25px rgba(188, 19, 254, 0.4);
+    border-color: var(--primary-purple);
+}
+
+.thumbnail-img {
+    width: 150px;
+    height: 85px;
+    object-fit: cover;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.thumbnail-img img { width: 100%; height: 100%; display: block; }
+
+.play-icon {
+    position: absolute;
+    top: 50%; left: 50%; transform: translate(-50%, -50%);
+    width: 35px; height: 35px; background: rgba(255, 0, 0, 0.9);
+    border-radius: 50%; display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.6);
+}
+
+.play-icon::after {
+    content: ''; width: 0; height: 0; border-style: solid;
+    border-width: 8px 0 8px 12px; border-color: transparent transparent transparent #ffffff;
+    margin-left: 2px;
+}
+
+.card-info { padding: 15px; text-align: right; flex-grow: 1; }
+.card-info h3 { margin: 0 0 5px 0; font-size: 1.1rem; }
+.card-info p { margin: 0; font-size: 0.9rem; color: #ccc; }
+
+/* --- التذييل (Footer) --- */
+footer {
+    text-align: center;
+    padding: 40px 0 20px 0;
+    color: #666;
+    font-size: 0.8rem;
+}
+
+/* --- استجابة (Responsive Design) --- */
+@media (max-width: 650px) {
+    .main-content {
+        padding: 10px;
+    }
+    .video-thumbnail-card {
+        flex-direction: column; /* جعل الصورة المصغرة في الأعلى على الجوال */
+        align-items: stretch;
+    }
+    .thumbnail-img {
+        width: 100%;
+        height: 180px;
+    }
+    .card-info {
+        text-align: center;
+    }
+}
